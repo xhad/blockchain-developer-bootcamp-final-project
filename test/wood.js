@@ -9,18 +9,18 @@ const getStorage = async (address, contract) => {
   )
 };
 
-let logDb, sender
+let wood, sender
 
 before(async () => {
-  const LogDB = await ethers.getContractFactory('LogDB');
-  logDb = await (await LogDB.deploy()).deployed()
+  const wood = await ethers.getContractFactory('wood');
+  wood = await (await wood.deploy()).deployed()
 
   sender = await ethers.provider.getSigner(0).getAddress()
 })
 
-describe("Call LogDB", function() {
+describe("Call wood", function() {
 
-  it ("Should save data to the log", async function () {
+  it ("Should save data to the logs", async function () {
 
     const data = [
       // the contract to associate metadata
@@ -33,25 +33,25 @@ describe("Call LogDB", function() {
       ],
       [
         'companyName',
-        'Acme Research, LLC'
+        'Cabin Fever, LLC'
       ],
       [
         'twitter',
-        '@acmeresearch'
+        '@cabin'
       ],
       [
         'website',
-        'https://acmeresearch.com'
+        'https://cabinfever.finance'
       ],
       [
-        'aboutCompany',
-        'Acme Research will pull money out of the air with magic code.'
+        'aboutArtist',
+        'John puts fear in the hearts of all digital artists north of the mountain pass.'
       ]
     ]
 
-    await(await logDb.storeData(JSON.stringify(data))).wait()
+    await(await wood.storeData(JSON.stringify(data))).wait()
     
-    const storage = await getStorage(sender, logDb);
+    const storage = await getStorage(sender, wood);
 
     expect(storage.sender === sender)
 

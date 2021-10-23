@@ -3,12 +3,12 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const LogDB = await hre.ethers.getContractFactory("LogDB");
-  const logDB = await LogDB.deploy();
+  const Wood = await hre.ethers.getContractFactory("Wood");
+  const wood = await Wood.deploy();
 
-  await logDB.deployed();
+  await wood.deployed();
 
-  console.log("LogDB deployed to:", logDB.address);
+  console.log("Wood deployed to:", wood.address);
 }
 
 main()
