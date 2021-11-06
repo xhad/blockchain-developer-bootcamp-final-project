@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.7.0;
 
-contract LogDB {
+contract LogDb {
 
   event DataEvent (address indexed sender, string data);
 

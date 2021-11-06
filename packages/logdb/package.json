@@ -1,0 +1,31 @@
+{
+  "name": "woodb",
+  "licence": "MIT",
+  "scripts": {
+    "chain": "hardhat node",
+    "console": "hardhat console",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run ./scripts/deploy.ts",
+    "test": "hardhat test ./test/log-db.test.ts"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/ethers-v5": "^8.0.1",
+    "@typechain/hardhat": "^3.0.0",
+    "@types/node": "^16.11.6",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.4",
+    "hardhat-gas-reporter": "^1.0.4",
+    "ts-node": "^10.4.0",
+    "typechain": "^6.0.2",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0"
+  }
+}

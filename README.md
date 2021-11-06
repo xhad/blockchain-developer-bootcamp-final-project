@@ -1,14 +1,14 @@
 ## Consensys Academy
 
-# Wood DB
-"WoodDB is the MongoDB killer of the Web3 world." - Jason
+# LogDB
+"Log DB is the MongoDB killer of the Web3 world." - Jason
 
 <img src="log.svg">
 
 
 ## Data Store
 
-WoodDB is a simple data storage protocol that stores offcahin metadata with event logs more cheaply than onchain storage.
+LogDb is a simple data storage protocol that stores offcahin metadata with event logs more cheaply than onchain storage.
 
 Just emit an event to store metadata associated with a given contract address. See the test for an example.
 
